@@ -7,10 +7,12 @@ on:
     branches:
       - main
       - '*-dev'
+      - '*-branch'
   pull_request:
     branches:
       - main
       - '*-dev'
+      - '*-branch'
 
 jobs:
   build:
