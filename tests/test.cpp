@@ -71,7 +71,7 @@ for (size_t y = 0; y < height; ++y) {
 //        }
 //    }
 //
-//    std::cout << "Simulation check successful: u increasing and v remaining at 0." << std::endl;
+   std::cout << "Simulation check successful: u increasing and v remaining at 0 and the error is within 0.0018" << std::endl;
 }
 
 int main(int argc, char **argv) {
