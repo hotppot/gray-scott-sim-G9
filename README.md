@@ -6,16 +6,17 @@ Then we should add a README file with detailed instructions for building the app
 
 
 ## Build System
-```markdown
-:
 
-```
+
+
+
+
+
 
 ## CI
-```markdown
-continuous integration (CI):
 
-```
+
+
 
 
 ## Required tools and skills
@@ -24,22 +25,19 @@ Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
 ## Details about 3 tests
 
 ### test1: Check that the type of the model parameters (F , k) matches that of the element typeof the u and v vectors.
-```markdown
-Here is an example C++ program that implements test1:
+Illustration about test1:
 
-```
+
 
 ### test2: Check that the variables u and v are the same size.
-```markdown
-Here is an example C++ program that implements test2:
+Illustration about test2:
 
-```
+
 
 ### test3: Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
-```markdown
-Here is an example C++ program that implements test3:
+Illustration about test3:
 
-```
+
 
 ## Contributors
 Xiaoyuan Xu, Cai Gao, Chuang Li, Chu Duan, Yang Wei
