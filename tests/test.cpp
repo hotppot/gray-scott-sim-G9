@@ -30,7 +30,7 @@ TEST(GrayScottTest, CheckSimulationResultForZero) {
     // Initialize u and v to 0
     for (auto &row : u) std::fill(row.begin(), row.end(), 0.0);
     for (auto &row : v) std::fill(row.begin(), row.end(), 0.0);
-    const double epsilon = 0.0018; // 用于浮点数比较的小值
+    const double epsilon = 0.0018; // Small value for floating point comparison
 // Perform a simulation step
 simulateStep();
 
@@ -38,39 +38,10 @@ simulateStep();
 for (size_t x = 0; x < width; ++x) {
 for (size_t y = 0; y < height; ++y) {
     // When both u and v are 0, the result should stay 0 (assuming no external feed or kill rates)
-//    EXPECT_DOUBLE_EQ(0.0, u[x][y]);
-//    EXPECT_DOUBLE_EQ(0.0, v[x][y]);
-//    printf("%f\n",u[x][y]);
-//    printf("%f\n",v[x][y]);
     EXPECT_NEAR(u[x][y], 0.0, epsilon);
     EXPECT_NEAR(v[x][y], 0.0, epsilon);
 }
 }
-//    for (int x = 0; x < width; ++x) {
-//        for (int y = 0; y < height; ++y) {
-//            u[x][y] = 0.0;  // Set u to 0
-//            v[x][y] = 0.0;  // Set v to 0
-//        }
-//    }
-//    // Run a few iterations
-//    for (int iteration = 0; iteration < 10; ++iteration) {
-//        simulateStep();
-//    }
-//    // Check the values of u and v after a few iterations
-//    for (int x = 0; x < width; ++x) {
-//        for (int y = 0; y < height; ++y) {
-//            if (v[x][y] != 0.0) {
-//                std::cout << "Error: v should be 0 at all positions." << std::endl;
-//                return;
-//            }
-//            if (u[x][y] < 0.0) {
-//                std::cout << "u[" << x << "][" << y << "] = " << u[x][y] << std::endl;
-//                std::cout << "Error: u should be increasing from 0." << std::endl;
-//                return;
-//            }
-//        }
-//    }
-//
    std::cout << "Simulation check successful: u increasing and v remaining at 0 and the error is within 0.0018" << std::endl;
 }
 
