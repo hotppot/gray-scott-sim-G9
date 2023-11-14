@@ -1,6 +1,21 @@
 # gray-scott-sim-G9
+
+## Project introduction:
 This project allows us group members to clone the template repository. Furthermore, there are mainly 3 testing frameworks we should choose. 
 Then we should add a README file with detailed instructions for building the application locally, create a build system for the software, and implement continuous integration (CI) for the selected repository.
+
+
+## Build System
+```markdown
+:
+
+```
+
+## CI
+```markdown
+continuous integration (CI):
+
+```
 
 
 ## Required tools and skills
