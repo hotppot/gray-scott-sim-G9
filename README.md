@@ -72,7 +72,7 @@ https://github.com/google/googletest
 
 Method introduction:
 
-There are two methods to complete the test. The first one is used to directly compare whether the expected output value and the actual output value are the same, and the second one is used to determine whether the actual output value and the estimated value are within a certain error.
+There are two methods EXPECT_DOUBLE_EQ and EXPECT_NEAR to complete the test. The first one is used to directly compare whether the expected output value and the actual output value are the same, and the second one is used to determine whether the actual output value and the estimated value are within a certain error.
 
 ## Contributors
 Xiaoyuan Xu, Cai Gao, Chuang Li, Chu Duan, Yang Wei
