@@ -63,10 +63,12 @@ Illustration about test2:
 
 ### test3: Check that the simulation produces the mathematically correct answer when u = 0 and v = 0.
 Illustration about test3:
-  Test3 is simply a special value test. Let the two parameters u and v be 0 and check whether the output result meets the mathematical expected result. This kind of test is highly subjective and can often detect the system flaws and therefore it is necessary.
+
+Test3 is simply a special value test. Let the two parameters u and v be 0 and check whether the output result meets the mathematical expected result. This kind of test is highly subjective and can often detect the system flaws and therefore it is necessary.
 
 Method introduction:
-  There are two methods to complete the test. The first one is used to directly compare whether the expected output value and the actual output value are the same, and the second one is used to determine whether the actual output value and the estimated value are within a certain error.
+
+There are two methods to complete the test. The first one is used to directly compare whether the expected output value and the actual output value are the same, and the second one is used to determine whether the actual output value and the estimated value are within a certain error.
 
 ## Contributors
 Xiaoyuan Xu, Cai Gao, Chuang Li, Chu Duan, Yang Wei
