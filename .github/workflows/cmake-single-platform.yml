@@ -17,14 +17,14 @@ jobs:
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. 
-      run: cmake -B ${{github.workspace}}/build 
+      run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release
 
     - name: Build
       # Build the program with the given configuration
-      run: cmake --build ${{github.workspace}}/build 
+      run: cmake --build ${{github.workspace}}/build --config Release
 
     - name: Test
       working-directory: ${{github.workspace}}/build
       # Execute tests defined by the CMake configuration.
-      run: ctest 
+      run: ctest -C Release
 
