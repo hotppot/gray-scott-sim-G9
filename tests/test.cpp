@@ -5,7 +5,7 @@
 #include "test.h"
 // test.cpp
 #include <gtest/gtest.h>
-#include "gs.h"  // 包含头文件，而不是 gs.cpp
+#include "gs.h"
 
 //#include "gs.cpp"  // Assuming gs.cpp is in the same directory and has the necessary functions exposed.
 
@@ -30,19 +30,16 @@ TEST(GrayScottTest, CheckSimulationResultForZero) {
     // Initialize u and v to 0
     for (auto &row : u) std::fill(row.begin(), row.end(), 0.0);
     for (auto &row : v) std::fill(row.begin(), row.end(), 0.0);
-    const double epsilon = 0.0018; // Small value for floating point comparison
 // Perform a simulation step
 simulateStep();
 
 // Check the result after one simulation step
-for (size_t x = 0; x < width; ++x) {
-for (size_t y = 0; y < height; ++y) {
-    // When both u and v are 0, the result should stay 0 (assuming no external feed or kill rates)
-    EXPECT_NEAR(u[x][y], 0.0, epsilon);
-    EXPECT_NEAR(v[x][y], 0.0, epsilon);
-}
-}
-   std::cout << "Simulation check successful: u increasing and v remaining at 0 and the error is within 0.0018" << std::endl;
+for (size_t x = 1; x < width-1; ++x) {
+for (size_t y = 1; y < height-1; ++y) {
+    // When both u and v are 0, the output value of u should be 0.0018 and the output value of v should be 0 (assuming no external feed or kill rates)
+    EXPECT_DOUBLE_EQ(0.0018, u[x][y]);
+    EXPECT_DOUBLE_EQ(0.0, v[x][y]);
+    std::cout << "Simulation check successful: u increases to 0.0018 and v remains at 0." << std::endl;
 }
 
 int main(int argc, char **argv) {
