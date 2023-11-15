@@ -10,28 +10,13 @@
 
 // Test 0.1: Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors.
 TEST(GrayScottTest, CheckParameterTypes) {
-// Check if types of F and k match the type of elements in u and v
-    std::cout << "test-Type of F: " << typeid(decltype(F)).name() << std::endl;
-    std::cout << "test-Type of k: " << typeid(k).name() << std::endl;
-    std::cout << "test-Type of u: " << typeid(decltype(u[0][0])).name() << std::endl;
-    std::cout << "test-Type of v: " << typeid(decltype(v[0][0])).name() << std::endl;
-
-    //编译时类型检查
-//    EXPECT_TRUE((std::is_same<decltype(F), double>::value));
-//    EXPECT_TRUE((std::is_same<decltype(k), double>::value));
-//    EXPECT_TRUE((std::is_same<decltype((u[0][0])), double>::value));
-//    EXPECT_TRUE((std::is_same<decltype(v[0][0]), double>::value));
-//    static_assert(std::is_same<decltype(F), decltype(k)>::value, "Type of F does not match type of u's elements.");
-//    static_assert(std::is_same<decltype(u[0][0]), double>::value, "Type of k does not match type of v's elements.");
-
-    //运行时类型检查
-    ASSERT_TRUE(typeid(F) == typeid(u[0][0]));
-    ASSERT_TRUE(typeid(F) == typeid(v[0][0]));
-    ASSERT_TRUE(typeid(k) == typeid(u[0][0]));
-    ASSERT_TRUE(typeid(k) == typeid(v[0][0]));
-
-
-
+    // Check if types of F and k match the type of elements in u and v
+    ASSERT_TRUE((std::is_same<decltype(F), double>::value));
+    ASSERT_TRUE((std::is_same<decltype(k), double>::value));
+    using UElementType = decltype(u[0][0]);
+    using VElementType = decltype(v[0][0]);
+    ASSERT_TRUE(typeid(F).name() == typeid(UElementType).name() && typeid(k).name() == typeid(VElementType).name());
+    //std::cout << "Test1 Passed!" << std::endl;
 }
 
 // Test 0.2: Check that the variables u and v are the same size.
