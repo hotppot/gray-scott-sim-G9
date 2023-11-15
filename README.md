@@ -6,6 +6,33 @@ Then we should add a README file with detailed instructions for building the app
 
 
 ## Build System
+1、why we choose cmake to build system？
+CMake
+Widely used: CMake is the build system most widely integrated with Google Test.
+Cross-platform: CMake can be used on multiple platforms including Windows, Linux and macOS.
+Feature-rich: It supports complex project structures including conditional compilation, different compilation options, discovery and linking dependencies.
+Integrated CI: CMake is compatible with most CI/CD systems and is easy to integrate into the continuous integration process.
+
+compared with Make、Bazel、Ninja、Meson, we learned it in class, all group members are familiar with it.
+
+
+We configure the system build in the CMakeLists.txt.
+
+There are the things we did in it:
+1. Sets the minimum version requirement for CMake, which is 3.14. 
+2. Project name defined.
+3. Sets the compilation standard for C++. 
+4. Test functionality enabled. 
+5. The FetchContent module is used to declare external dependencies (in this case Google Test). 
+6. Check and possibly download Google Test. 
+7. The source files are added, creating an executable called GrayScottSim. 
+8. Test files are added, creating a test executable named GrayScottTests. 
+9. Linked the Google Test library to the test executable. 
+10. Contains macros provided by Google Test to discover and register tests.
+
+
+https://cmake.org/
+
 
 
 
