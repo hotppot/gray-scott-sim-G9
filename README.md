@@ -41,9 +41,13 @@ https://cmake.org/
 
 
 ## CI
-
-
-
+CI, is a methodology that involves regularly integrating code changes to ensure a fast and reliable build and test process.
+It consists of three components：
+1. Trigger
+   When there is a push or pull request in 'main' branch, CI will automatically checking out the code.
+2. Build
+   We use CMake to construct and build the program in subdictionary 'build'. We've chosen the 'Release' build type to optimize our code for production environments. This ensures it performs efficiently when deployed.
+3. CTEST
 
 
 ## Required tools and skills
