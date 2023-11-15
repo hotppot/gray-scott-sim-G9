@@ -3,7 +3,6 @@
 //
 #include "gs.h"  // 包含头文件，而不是 gs.cpp
 #include "test.h"
-// test.cpp
 #include <gtest/gtest.h>
 
 //#include "gs.cpp"  // Assuming gs.cpp is in the same directory and has the necessary functions exposed.
