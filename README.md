@@ -60,7 +60,7 @@ https://github.com/google/googletest
 ### test1: Check that the type of the model parameters (F , k) matches that of the element typeof the u and v vectors.
 Illustration about test1:
 
-Test1 is Check that the model parameter types (F, k) match the element types of the u and v vectors. This test verifies that the data types of the model parameters F and k are double, which is a basic check to ensure data type consistency.In addition, it checks that the types of F and k are the same as the types of the elements in the u and v vectors. This step ensures that the parameters are compatible with the data types used in the model, which is essential to avoid type conversion errors and maintain the precision of numerical computations.
+This test verifies that the data types of the model parameters F and k are double, which is a basic check to ensure data type consistency.In addition, it checks that the types of F and k are the same as the types of the elements in the u and v vectors. This step ensures that the parameters are compatible with the data types used in the model, which is essential to avoid type conversion errors and maintain the precision of numerical computations.
 
 Method introduction:
 
@@ -69,7 +69,7 @@ The ‘ASSERT_TRUE’ method is mainly used in this test; this method is used to
 ### test2: Check that the variables u and v are the same size.
 Illustration about test2:
 
-Test2 is Check that variables u and v have the same size.This test ensures that the u and v vectors have the same dimensions. Since these two vectors represent the two chemicals in the model, they must be simulated on the same spatial grid, so they must have the same dimensions. The test first checks that the outer dimensions (i.e., the number of rows) are equal, and then for each row it checks that its inner dimensions (i.e., the number of columns) are equal.
+This test ensures that the u and v vectors have the same dimensions. Since these two vectors represent the two chemicals in the model, they must be simulated on the same spatial grid, so they must have the same dimensions. The test first checks that the outer dimensions (i.e., the number of rows) are equal, and then for each row it checks that its inner dimensions (i.e., the number of columns) are equal.
 
 Method introduction:
 
