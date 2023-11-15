@@ -12,8 +12,12 @@
 // Test 0.1: Check that the type of the model parameters (F, k) matches that of the element type of the u and v vectors.
 TEST(GrayScottTest, CheckParameterTypes) {
 // Check if types of F and k match the type of elements in u and v
-EXPECT_TRUE((std::is_same<decltype(F), decltype(u[0][0])>::value));
-EXPECT_TRUE((std::is_same<decltype(k), decltype(v[0][0])>::value));
+ASSERT_TRUE((std::is_same<decltype(F), double>::value));
+ASSERT_TRUE((std::is_same<decltype(k), double>::value));
+using UElementType = decltype(u[0][0]);
+using VElementType = decltype(v[0][0]);
+ASSERT_TRUE(typeid(F).name() == typeid(UElementType).name() && typeid(k).name() == typeid(VElementType).name());
+//std::cout << "Test1 Passed!" << std::endl;
 }
 
 // Test 0.2: Check that the variables u and v are the same size.
