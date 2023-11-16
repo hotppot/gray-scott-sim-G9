@@ -2,41 +2,35 @@
 
 ## Project introduction:
 This project allows us group members to clone the template repository. Furthermore, there are mainly 3 testing frameworks we should choose. 
-Then we should add a README file with detailed instructions for building the application locally, create a build system for the software, and implement continuous integration (CI) for the selected repository.
+Then we should add a README file with detailed instructions for building the application locally, create a build system for the software, 
+and implement continuous integration (CI) for the selected repository.
 
 
 ## Build System
-1、why we choose cmake to build system？
-CMake
-Widely used: CMake is the build system most widely integrated with Google Test.
-Cross-platform: CMake can be used on multiple platforms including Windows, Linux and macOS.
-Feature-rich: It supports complex project structures including conditional compilation, different compilation options, discovery and linking dependencies.
-Integrated CI: CMake is compatible with most CI/CD systems and is easy to integrate into the continuous integration process.
+`gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, 
+especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlining our build and testing processes.
 
-compared with Make、Bazel、Ninja、Meson, we learned it in class, all group members are familiar with it.
+### Prerequisites
+Before building gray-scott-sim-G9, ensure you have the following tools installed on your system:
+   - **CMake**:gray-scott-sim-G9 uses CMake to manage the build process, The minimum required version of CMake for this project is 3.14, 
+     to check if CMake is installed and find its version, you can run `cmake --version` in your terminal.
+     If you haven't installed CMake, please visit https://cmake.org/download/ to install it. The installation process may vary depending on your computer's operating system.
+   - **GCC**: GCC (GNU Compiler Collection) is required to compile the source code of gray-scott-sim-G9.
+     并且项目使用CI系统，CI will automatically checking out the code.
+     It is likely that GCC is already installed on your system if you are using a Unix-like operating system. 
+     On Windows, you may want to install MinGW-w64 or Cygwin to get GCC. To check if GCC is installed and find its version, 
+     you can run `gcc --version` in your terminal. For installation instructions, refer to the [official GCC documentation](https://gcc.gnu.org/install/) or use your operating system's package manager.
+     It's important to note that you don't need to download and install Google Test yourself, even though we have linked the Google Test library to the test executable in our `CMakeLists.txt` file. This is because in this file, we have configured the online download and installation of Google Test, and the version has already been determined, so you don't need to worry about it.
+### Building the Project with CMake
+To compile the project, create a build directory and run CMake from within it:
 
+```bash
+mkdir build && cd build
+cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+cmake --build .
+```
 
-We configure the system build in the CMakeLists.txt.
-
-There are the things we did in it:
-1. Sets the minimum version requirement for CMake, which is 3.14. 
-2. Project name defined.
-3. Sets the compilation standard for C++. 
-4. Test functionality enabled. 
-5. The FetchContent module is used to declare external dependencies (in this case Google Test). 
-6. Check and possibly download Google Test. 
-7. The source files are added, creating an executable called GrayScottSim. 
-8. Test files are added, creating a test executable named GrayScottTests. 
-9. Linked the Google Test library to the test executable. 
-10. Contains macros provided by Google Test to discover and register tests.
-
-
-https://cmake.org/
-
-
-
-
-
+This will configure the project to use GCC for C and C++ compilation and then build the project.
 
 
 
@@ -90,3 +84,13 @@ There are two methods EXPECT_DOUBLE_EQ and EXPECT_NEAR to complete the test. The
 
 ## Contributors
 Xiaoyuan Xu, Cai Gao, Chuang Li, Chu Duan, Yang Wei
+
+
+
+## Bibliography
+
+CMake. (n.d.). Retrieved from [https://cmake.org/download/](https://cmake.org/download/)
+
+GNU Compiler Collection (GCC). (n.d.). Retrieved from [https://gcc.gnu.org/install/](https://gcc.gnu.org/install/)
+
+GoogleTest. (n.d.). Retrieved from [https://github.com/google/googletest](https://github.com/google/googletest)
