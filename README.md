@@ -35,7 +35,7 @@ cmake --build .
 
 This will configure the project to use GCC for C and C++ compilation and then build the project.
 
-### 2 mian advantages when building system
+### Two mian advantages when building system
 
 1) Ensure compatibility of tools and third-party libraries used in the project. For this, we have specified the minimum version of CMake, the C++ standard, and the version of GoogleTest in CMakeList.txt.
 ```bash
