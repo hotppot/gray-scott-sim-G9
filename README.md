@@ -1,7 +1,7 @@
 # gray-scott-sim-G9
 
 ## Project introduction:
-`gray-scott-sim-G9` is a C++ implementation of the Gray-Scott reaction-diffusion equations, utilizing CMake for streamlined builds. We maintain quality with Google Test, ensuring parameter types, variable sizes, and baseline behavior are correct. Our CI process, supported by GCC, upholds code integrity across platforms.
+`gray-scott-sim-G9` is a C++ implementation of the Gray-Scott reaction-diffusion equations, utilizing CMake for system building. We maintain quality with Google Test, ensuring parameter types, variable sizes, and baseline behavior are correct. Our CI process, supported by GCC, upholds code integrity across platforms.
 
 ## Required tools and skills
 Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
