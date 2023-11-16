@@ -1,11 +1,6 @@
 # gray-scott-sim-G9
 
 ## Project introduction:
-This project allows us group members to clone the template repository. Furthermore, there are mainly 3 testing frameworks we should choose. 
-Then we should add a README file with detailed instructions for building the application locally, create a build system for the software, 
-and implement continuous integration (CI) for the selected repository.
-
-看看要不要改成这样？感觉上面在讲题目要求there are mainly 3 testing frameworks we should choose，这句话感觉不需要，因为我们已经选了第一个googletest
 `gray-scott-sim-G9` is a C++ implementation of the Gray-Scott reaction-diffusion equations, utilizing CMake for streamlined builds. We maintain quality with Google Test, ensuring parameter types, variable sizes, and baseline behavior are correct. Our CI process, supported by GCC, upholds code integrity across platforms.
 
 ## Required tools and skills
@@ -61,7 +56,6 @@ endif()
 
 ## Details about 3 tests
 
-建议在这里写上执行test的命令，目的是告诉读者我们的test.cpp是测试代码
 
 The three test cases in this project were written using the GoogleTest framework to verify the stability of the Gray-Scott model algorithm implementation.
 
