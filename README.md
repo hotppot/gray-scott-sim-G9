@@ -11,7 +11,8 @@ Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
 
 
 ## Group Collaboration Schedule
-![img.png](img-group-collaboration-schedule.png)
+<img width="1045" alt="image" src="https://github.com/hotppot/gray-scott-sim-G9/assets/34099139/8a64f966-efe1-4f99-a43a-8b8ce49fa0b2">
+
 
 ## Build System
 `gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlines our build and testing processes.
@@ -35,6 +36,8 @@ cmake --build .
 This will configure the project to use GCC for C and C++ compilation and then build the project.
 
 ### 2 mian advantages when building system
+
+1) Ensure compatibility of tools and third-party libraries used in the project. For this, we have specified the minimum version of CMake, the C++ standard, and the version of GoogleTest in CMakeList.txt.
 ```bash
 cmake_minimum_required(VERSION 3.14)
 #Set C++ standard
@@ -43,9 +46,18 @@ set(CMAKE_CXX_STANDARD 11)
 include(FetchContent)
 FetchContent_Declare(
         googletest
-        URL https://github.com/google/googletest/archive/release-1.10.0.zip
+        URL https://github.com/google/googletest/archive/release-1.10.0.zip #spcify the googletest version
 )
-  
+```
+
+2) By integrating GoogleTest online, we simplify the task for team members to download and configure paths. It only needs to be downloaded once, since the download status is checked before each build.
+```bash
+# Contains FetchContent module
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/release-1.10.0.zip #spcify the googletest version
+)
  # To avoid downloading it on every build, we can check if Google Test has already been downloaded.
 FetchContent_GetProperties(googletest)
 if(NOT googletest_POPULATED)
