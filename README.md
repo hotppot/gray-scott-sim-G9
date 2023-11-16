@@ -25,7 +25,8 @@ Before building `gray-scott-sim-G9`, ensure you have the following tools install
 To compile the project, create a build directory and run CMake from within it:
 
 ```bash
-mkdir build && cd build
+mkdir build
+cd build
 cmake .. -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
 cmake --build .
 ```
