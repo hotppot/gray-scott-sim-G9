@@ -37,6 +37,27 @@ cmake --build .
 
 This will configure the project to use GCC for C and C++ compilation and then build the project.
 
+### 2 mian advantages when building system
+```bash
+cmake_minimum_required(VERSION 3.14)
+#Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+# Contains FetchContent module
+include(FetchContent)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/release-1.10.0.zip
+)
+  
+ # To avoid downloading it on every build, we can check if Google Test has already been downloaded.
+FetchContent_GetProperties(googletest)
+if(NOT googletest_POPULATED)
+    FetchContent_Populate(googletest)
+    #Add googletest directly to our build. This defines the targets gtest and gtest_main.
+    add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
+endif()
+```
+
 
 ## Details about 3 tests
 
