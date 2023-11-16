@@ -65,6 +65,12 @@ GoogleTest frameworks:
 
 https://github.com/google/googletest
 
+Execute tests：
+
+```bash
+ctest --verbose
+```
+
 ### test1: Check that the type of the model parameters (F , k) matches that of the element typeof the u and v vectors.
 Illustration about test1:
 
