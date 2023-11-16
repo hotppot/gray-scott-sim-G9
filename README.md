@@ -7,20 +7,12 @@ and implement continuous integration (CI) for the selected repository.
 
 
 ## Build System
-`gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, 
-especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlining our build and testing processes.
+`gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlining our build and testing processes.
 
 ### Prerequisites
 Before building gray-scott-sim-G9, ensure you have the following tools installed on your system:
-   - **CMake**:gray-scott-sim-G9 uses CMake to manage the build process, The minimum required version of CMake for this project is 3.14, 
-     to check if CMake is installed and find its version, you can run `cmake --version` in your terminal.
-     If you haven't installed CMake, please visit https://cmake.org/download/ to install it. The installation process may vary depending on your computer's operating system.
-   - **GCC**: GCC (GNU Compiler Collection) is required to compile the source code of gray-scott-sim-G9.
-     并且项目使用CI系统，CI will automatically checking out the code.
-     It is likely that GCC is already installed on your system if you are using a Unix-like operating system. 
-     On Windows, you may want to install MinGW-w64 or Cygwin to get GCC. To check if GCC is installed and find its version, 
-     you can run `gcc --version` in your terminal. For installation instructions, refer to the [official GCC documentation](https://gcc.gnu.org/install/) or use your operating system's package manager.
-     It's important to note that you don't need to download and install Google Test yourself, even though we have linked the Google Test library to the test executable in our `CMakeLists.txt` file. This is because in this file, we have configured the online download and installation of Google Test, and the version has already been determined, so you don't need to worry about it.
+   - **CMake**:gray-scott-sim-G9 uses CMake to manage the build process, The minimum required version of CMake for this project is 3.14, to check if CMake is installed and find its version, you can run `cmake --version` in your terminal. If you haven't installed CMake, please visit https://cmake.org/download/ to install it. The installation process may vary depending on your computer's operating system.
+   - **GCC**: GCC (GNU Compiler Collection) is required to compile the source code of gray-scott-sim-G9. To ensure compatibility with our Continuous Integration (CI) setup, we recommend using GCC as the compiler for building the project. Our CI pipelines are configured with GCC, which ensures that the code compiles correctly and passes all tests under this compiler. It is likely that GCC is already installed on your system if you are using a Unix-like operating system. On Windows, you may want to install MinGW-w64 or Cygwin to get GCC. To check if GCC is installed and find its version, you can run `gcc --version` in your terminal. For installation instructions, refer to the [official GCC documentation](https://gcc.gnu.org/install/) or use your operating system's package manager. It's important to note that you don't need to download and install Google Test yourself, even though we have linked the Google Test library to the test executable in our `CMakeLists.txt` file. This is because in this file, we have configured the online download and installation of Google Test, and the version has already been determined, so you don't need to worry about it.
 ### Building the Project with CMake
 To compile the project, create a build directory and run CMake from within it:
 
