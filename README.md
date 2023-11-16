@@ -14,7 +14,7 @@ Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
 ## Project Introduction Schedule
 
 ## Group Collaboration Schedule
-![img.png](img.png)
+![img.png](img-group-collaboration-schedule.png)
 
 ## Build System
 `gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlines our build and testing processes.
