@@ -7,6 +7,8 @@
 Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
 
 ## Project Introduction Schedule
+![Project](https://github.com/hotppot/gray-scott-sim-G9/assets/149593797/7a2bf3e8-e331-4214-baa4-cca7f102aae2)
+
 
 ## Group Collaboration Schedule
 ![img.png](img-group-collaboration-schedule.png)
