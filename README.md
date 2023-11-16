@@ -40,7 +40,7 @@ This will configure the project to use GCC for C and C++ compilation and then bu
 
 ## Details about 3 tests
 
-建议在这里协商执行test的命令
+建议在这里写上执行test的命令，目的是告诉读者我们的test.cpp是测试代码
 
 The three test cases in this project were written using the GoogleTest framework to verify the stability of the Gray-Scott model algorithm implementation.
 
