@@ -10,7 +10,7 @@ and implement continuous integration (CI) for the selected repository.
 
 
 ## Build System
-`gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlining our build and testing processes.
+`gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlines our build and testing processes.
 
 ### Prerequisites
 Before building `gray-scott-sim-G9`, ensure you have the following tools installed on your system:
