@@ -8,6 +8,9 @@ and implement continuous integration (CI) for the selected repository.
 看看要不要改成这样？感觉上面在讲题目要求there are mainly 3 testing frameworks we should choose，这句话感觉不需要，因为我们已经选了第一个googletest
 `gray-scott-sim-G9` is a C++ implementation of the Gray-Scott reaction-diffusion equations, utilizing CMake for streamlined builds. We maintain quality with Google Test, ensuring parameter types, variable sizes, and baseline behavior are correct. Our CI process, supported by GCC, upholds code integrity across platforms.
 
+## Required tools and skills
+Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
+
 
 ## Build System
 `gray-scott-sim-G9` is built using CMake, which is detailed in the `CMakeLists.txt` file. We chose CMake for its wide usage, especially with Google Test, and its cross-platform support is super convenient for developers. Additionally, its easy integration with CI/CD systems streamlines our build and testing processes.
@@ -41,8 +44,6 @@ It consists of three components：
 3. CTEST
 
 
-## Required tools and skills
-Git Bash, Clion, Cmake, github, continuous integration (CI), google-test, C++
 
 ## Details about 3 tests
 
