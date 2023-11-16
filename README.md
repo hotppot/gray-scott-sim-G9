@@ -33,18 +33,6 @@ cmake --build .
 This will configure the project to use GCC for C and C++ compilation and then build the project.
 
 
-
-## CI
-CI, is a methodology that involves regularly integrating code changes to ensure a fast and reliable build and test process.
-It consists of three components：
-1. Trigger
-   When there is a push or pull request in 'main' branch, CI will automatically checking out the code.
-2. Build
-   We use CMake to construct and build the program in subdictionary 'build'. We've chosen the 'Release' build type to optimize our code for production environments. This ensures it performs efficiently when deployed.
-3. CTEST
-
-
-
 ## Details about 3 tests
 
 The three test cases in this project were written using the GoogleTest framework to verify the stability of the Gray-Scott model algorithm implementation.
@@ -79,6 +67,20 @@ Test3 is simply a special value test. Let the two parameters u and v be 0 and ch
 Method introduction:
 
 There are two methods EXPECT_DOUBLE_EQ and EXPECT_NEAR to complete the test. The first one is used to directly compare whether the expected output value and the actual output value are the same, and the second one is used to determine whether the actual output value and the estimated value are within a certain error.
+
+
+
+## CI
+CI, is a methodology that involves regularly integrating code changes to ensure a fast and reliable build and test process.
+It consists of three components：
+1. Trigger
+   When there is a push or pull request in 'main' branch, CI will automatically checking out the code.
+2. Build
+   We use CMake to construct and build the program in subdictionary 'build'. We've chosen the 'Release' build type to optimize our code for production environments. This ensures it performs efficiently when deployed.
+3. CTEST
+
+
+
 
 ## Contributors
 Xiaoyuan Xu, Cai Gao, Chuang Li, Chu Duan, Yang Wei
